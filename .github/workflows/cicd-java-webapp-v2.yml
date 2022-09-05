@@ -21,7 +21,7 @@ jobs:
   build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    environment: dev
+    environment: PoC-AppService
     steps:
     - uses: actions/checkout@master
     - name: Set up JDK 11
