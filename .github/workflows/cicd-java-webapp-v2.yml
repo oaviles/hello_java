@@ -38,7 +38,7 @@ jobs:
         path: '${{ github.workspace }}/target/*.war'  
         
     - name: 'List WAR'
-      run: ls ${{ github.workspace }}/target/*.*
+      run: ls -l ${{ github.workspace }}/target/*.*
       
       
     - name: 'Deploy to Azure WebApp'
