@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Update AKS
+
+# Controls when the workflow will run
+on:  workflow_dispatch
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  update-aks:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@main
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Udpate AKS with ACR
+      uses: Azure/cli@v1
+      with:
+        inlineScript: |
+          az aks update -g ${{ secrets.AZURE_RG }} -n ${{ secrets.CLUSTER_NAME }} --attach-acr ${{ secrets.ACR_NAME }}
