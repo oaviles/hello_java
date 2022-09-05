@@ -2,10 +2,10 @@
 
 This is a collection of sample projects for Cloud Application Developer using Azure Cloud Platform. The sample projects are arranged in different topics about Java Web development and deployment on App Service and Azure Kubernetes Service supported by Secure DevOps Practices.
 
-Scenario: Buid or Migrate Java Web Apps
+Scenario: [Buid or Migrate Java Web Apps](https://docs.microsoft.com/en-us/learn/modules/intro-to-java-azure/5-deployment-opportunities)
 ![](https://docs.microsoft.com/en-us/learn/modules/intro-to-java-azure/media/5-java-on-azure-info-graphic.jpg)
 
-Reference architecture: Deploy Java Web App to Azure App Service or Azure Kubernetes Service
+Reference architecture: [Deploy Java Web App to Azure App Service or Azure Kubernetes Service](https://docs.microsoft.com/en-us/learn/modules/migrate-java-app-azure-app-service/2-migrate-app-containerization-overview)
 ![](https://docs.microsoft.com/en-us/learn/modules/migrate-java-app-azure-app-service/media/process-overview.png)
 
 [Azure Destination for Java Web Apps](https://docs.microsoft.com/en-us/learn/modules/java-target-destinations/)
