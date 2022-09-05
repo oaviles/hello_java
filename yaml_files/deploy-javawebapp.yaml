@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: javawebapp
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: javawebapp
+  namespace: javawebapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: javawebapp
+  template:
+    metadata:
+      labels:
+        app: javawebapp
+    spec:
+      containers:
+      - name: javawebapp
+        image: oapocjavaacr.azurecr.io/javawebapp:latest
+        resources:
+          requests:
+            cpu: "1"
+            memory: "1Gi"
+          limits:
+            cpu: "2"
+            memory: "2Gi"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: javawebapp
+  namespace: javawebapp
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: javawebapp
