@@ -17,6 +17,7 @@ Reference architecture: [Deploy Java Web App to Azure App Service or Azure Kuber
 ### Check More DevSquad Projects
 * [DevSquad Main Project](https://github.com/microsoft/fast-prototyping)
 * [DevSquad Project: Azure Spring Cloud](https://github.com/oaviles/hello_springcloud)
+* [DevSquad ARO Project: Azure Red Hat OpenShift](https://github.com/oaviles/hello_ARO)
 
 > Note: This page is getting updated so make sure to check regularly for new resources.
 
